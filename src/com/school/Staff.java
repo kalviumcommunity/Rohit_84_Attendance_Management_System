@@ -1,22 +1,21 @@
 package com.school;
 
 public class Staff extends Person {
-    private String role;
-    
-    // Constructor
+    private String role; // e.g., "Librarian", "Administrator"
+
     public Staff(String name, String role) {
-        super(name); // Call parent constructor
+        super(name); // Calls Person constructor
         this.role = role;
     }
-    
-    // Getter methods
+
+    // Getter for role (optional for now)
     public String getRole() {
         return role;
     }
-    
+
     @Override
     public void displayDetails() {
-        super.displayDetails(); // Call parent displayDetails()
-        System.out.println("Staff Role: " + this.role + ", Role: Staff");
+        super.displayDetails();
+        System.out.println(", Role: " + role + " (Role: Non-Teaching Staff)");
     }
 }
